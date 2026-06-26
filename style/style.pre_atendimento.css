@@ -1,0 +1,221 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+            color: #2fa866;
+            font-size: 26px;
+}
+
+nav {
+           display: flex;
+           align-items: center;
+ }
+
+nav a {
+           margin-left: 25px;  
+           text-decoration: none;
+           color: #333;
+           font-size: 15px;
+           
+ }
+
+
+/* Hero */
+.hero {
+    background-color: #20d18c;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: #1abc78;
+    padding: 15px 40px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Conteúdo */
+.container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.container p {
+    font-size: 17px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #20d18c;
+}
+
+/* Botão */
+button {
+    align-self: center;
+    background-color: #20d18c;
+    color: #ffffff;
+    border: none;
+    padding: 14px 60px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #18b678;
+}
+
+/* Responsivo */
+/* =========================
+   TABLET (até 768px)
+========================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .breadcrumb {
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .container {
+        margin: 50px auto;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+
+/* =========================
+   CELULAR (até 480px)
+========================= */
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+
+    .container p {
+        font-size: 15px;
+    }
+
+    textarea {
+        min-height: 140px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
