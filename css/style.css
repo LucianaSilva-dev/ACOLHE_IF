@@ -1,0 +1,1574 @@
+/* =========================================================
+   ACOLHE IF - CSS ÚNICO
+   ========================================================= */
+
+/* =========================
+   1. RESET E CONFIGURAÇÕES GERAIS
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --verde-principal:#38b86b;
+    --verde-secundario:#2f9e5c;
+    --verde-escuro:#2e8b57;
+    --verde-claro:#e8f5ee;
+    --texto:#333;
+    --texto-suave:#555;
+    --branco:#ffffff;
+    --cinza-fundo:#f4f4f4;
+    --cinza-claro:#f9f9f9;
+    --sombra:0 4px 15px rgba(0,0,0,0.08);
+    --sombra-leve:0 2px 8px rgba(0,0,0,0.05);
+}
+
+body{
+    background:#f9f9f9;
+    color:var(--texto);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* =========================
+   2. HEADER / MENU INSTITUCIONAL
+========================= */
+
+header,
+.header,
+.header-institucional{
+    width:100%;
+    background:#ffffff;
+    display:block;
+    padding:0;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#ffffff;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:var(--verde-principal);
+    letter-spacing:2px;
+    white-space:nowrap;
+}
+
+
+nav ul,
+.nav-list{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav ul li a,
+nav a{
+    text-decoration:none;
+    color:var(--texto);
+    font-size:16px;
+    transition:0.3s;
+    font-weight:500;
+    white-space:nowrap;
+}
+
+nav ul li a:hover,
+nav a:hover{
+    color:var(--verde-principal);
+}
+
+.btn-register{
+    background:var(--verde-principal);
+    color:#fff !important;
+    padding:10px 22px;
+    border-radius:25px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.btn-register:hover{
+    background:#2f9e5c;
+}
+
+
+.header-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:32px 8%;
+    background:#ffffff;
+    border-top:none;
+}
+/* Área do menu hamburguer */
+.menu-area{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+#menu-check{
+    display:none;
+}
+
+
+.menu-toggle{
+    background:none !important;
+    border:none !important;
+    box-shadow:none !important;
+    padding:0 !important;
+    width:auto !important;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.menu-toggle span{
+    width:42px;
+    height:4px;
+    background:#0c6b62;
+    border-radius:4px;
+    display:block;
+}
+
+
+.menu-text{
+    font-size:25px;
+    color:#111;
+    font-weight:400;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+
+.menu-dropdown{
+    display:none;
+    position:absolute;
+    top:55px;
+    left:0;
+    width:260px;
+    background:#ffffff;
+    border:1px solid #dfe8e2;
+    border-radius:8px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    padding:15px 18px;
+    z-index:100;
+}
+
+#menu-check:checked ~ .menu-dropdown{
+    display:block;
+}
+
+.menu-dropdown a{
+    display:block;
+    color:#24313d;
+    font-size:15px;
+    font-weight:500;
+    padding:10px 0;
+    text-decoration:none;
+    border-bottom:1px solid #eeeeee;
+    transition:0.3s;
+}
+
+.menu-dropdown a:last-child{
+    border-bottom:none;
+}
+
+.menu-dropdown a:hover{
+    color:var(--verde-principal);
+    padding-left:5px;
+}
+
+
+
+.site-search{
+    width:330px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border:none !important;
+    background:#fff;
+}
+
+.site-search input{
+    flex:1;
+    border:none !important;
+    background:transparent;
+    outline:none;
+    padding:8px 5px;
+    font-size:17px;
+    color:#333;
+}
+
+.site-search input::placeholder{
+    color:#777;
+}
+
+.search-btn{
+    width:36px !important;
+    height:36px !important;
+    background:none !important;
+    border:none !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+    cursor:pointer;
+    position:relative;
+    flex-shrink:0;
+}
+
+
+.search-btn::before{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    border:3px solid #0c6b62;
+    border-radius:50%;
+    top:5px;
+    left:5px;
+}
+
+
+.search-btn::after{
+    content:"";
+    position:absolute;
+    width:12px;
+    height:3px;
+    background:#0c6b62;
+    transform:rotate(45deg);
+    top:24px;
+    left:22px;
+    border-radius:3px;
+}
+
+.search-btn:hover{
+    background:none !important;
+    transform:none !important;
+    box-shadow:none !important;
+}
+
+/* =========================
+   3. BOTÕES
+========================= */
+.btn-register,
+.btn-header,
+.btn-main,
+.btn-mentor,
+button[type="submit"]{
+    background:var(--verde-principal);
+    color:#fff;
+    padding:10px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    display:inline-block;
+    text-align:center;
+}
+
+.btn-register:hover,
+.btn-header:hover,
+.btn-main:hover,
+.btn-mentor:hover,
+button[type="submit"]:hover{
+    background:var(--verde-secundario);
+}
+
+.btn-login{
+    display:inline-block;
+    padding:12px 35px;
+    border:2px solid #fff;
+    border-radius:30px;
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn-login:hover{
+    background:#fff;
+    color:#000;
+}
+
+.btn-outline-mentor{
+    width:100%;
+    display:block;
+    text-align:center;
+    padding:12px 20px;
+    border-radius:50px;
+    border:2px solid var(--verde-principal);
+    background:transparent;
+    color:var(--verde-principal);
+    font-weight:600;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:12px;
+    text-decoration:none;
+}
+
+.btn-outline-mentor:hover{
+    background:var(--verde-principal);
+    color:#fff;
+}
+
+/* =========================
+   4. HERO DA PÁGINA INICIAL
+========================= */
+.hero-home,
+.hero{
+    height:90vh;
+    background-image:url('../imagens/hero-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    position:relative;
+}
+
+.hero-home::before,
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    left:0;
+    top:0;
+}
+
+.hero-content{
+    position:relative;
+    color:#fff;
+    max-width:600px;
+    z-index:1;
+}
+
+.hero-home h1,
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-home p,
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+/* =========================
+   5. HERO / BANNER DAS PÁGINAS INTERNAS
+   Usado por sobre, contato, serviços e pré-atendimento
+========================= */
+body:not(:has(.hero-home)) .hero,
+.banner{
+    height:auto;
+    background-image:none;
+    background:var(--verde-principal);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+    display:block;
+}
+
+body:not(:has(.hero-home)) .hero::before{
+    display:none;
+}
+
+body:not(:has(.hero-home)) .hero h1,
+.banner h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+body:not(:has(.hero-home)) .hero p,
+.banner p{
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* =========================
+   6. BREADCRUMB
+========================= */
+.breadcrumb{
+    background:var(--verde-secundario);
+    padding:15px 8%;
+    color:white;
+    font-size:14px;
+}
+
+.breadcrumb a{
+    color:white;
+    text-decoration:none;
+    font-weight:normal;
+}
+
+/* =========================
+   7. CONTAINERS GERAIS
+========================= */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 8%;
+}
+
+.container h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--verde-escuro);
+}
+
+/* =========================
+   8. PÁGINA DE SERVIÇOS
+========================= */
+.servicos{
+    padding:80px 40px;
+    background:#f9f9f9;
+}
+
+.servicos-container{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.servico-card{
+    background-color:#fff;
+    width:320px;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    display:flex;
+    flex-direction:column;
+    transition:0.3s;
+}
+
+.servico-card:hover{
+    transform:translateY(-5px);
+}
+
+.servico-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.servico-info{
+    padding:20px;
+    flex-grow:1;
+}
+
+.servico-info h3{
+    color:var(--verde-principal);
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.servico-info p{
+    font-size:15px;
+    color:var(--texto-suave);
+    line-height:1.5;
+}
+
+.servico-footer{
+    padding:20px;
+    border-top:1px solid #eee;
+    text-align:center;
+}
+
+.servico-footer a{
+    display:inline-block;
+    padding:10px 25px;
+    background-color:var(--verde-principal);
+    color:#fff;
+    text-decoration:none;
+    border-radius:20px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.servico-footer a:hover{
+    background-color:var(--verde-secundario);
+}
+
+/* =========================
+   9. PÁGINA SOBRE
+========================= */
+
+.sobre-tag.verde{
+    background:#eaf6ef;
+    color:#238a55;
+}
+
+.sobre-hero h1{
+    font-size:44px;
+    margin-bottom:15px;
+    font-weight:800;
+}
+
+.sobre-hero p{
+    font-size:18px;
+    max-width:760px;
+    margin:0 auto;
+    line-height:1.7;
+}
+
+.sobre-page{
+    background:#f7f9f8;
+}
+
+
+.sobre-intro.sem-imagem{
+    max-width:900px;
+    margin:0 auto;
+    padding:80px 8%;
+    display:block;
+    text-align:center;
+}
+
+.sobre-intro-text h2,
+.section-header h2{
+    color:#24313d;
+    font-size:34px;
+    line-height:1.25;
+    margin-bottom:18px;
+}
+
+.sobre-intro-text h2::after,
+.section-header h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:4px;
+    background:#38b86b;
+    border-radius:10px;
+    margin:14px auto 0;
+}
+
+.sobre-intro-text p{
+    color:#5f6b73;
+    font-size:16px;
+    margin-bottom:15px;
+    line-height:1.8;
+  
+}
+
+.sobre-compromisso{
+    background:#ffffff;
+    padding:75px 8%;
+}
+
+.section-header{
+    max-width:780px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.section-header p{
+    color:#5f6b73;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.compromisso-grid{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+}
+
+.compromisso-card{
+    background:#f7f9f8;
+    border:1px solid #dfe8e2;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 4px 16px rgba(36,49,61,0.06);
+    transition:0.25s;
+}
+
+.compromisso-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 28px rgba(36,49,61,0.12);
+}
+
+.compromisso-card h3{
+    color:#238a55;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.compromisso-card p{
+    color:#5f6b73;
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* =========================
+   10. PÁGINA CONTATO / PSICÓLOGOS
+========================= */
+.container:has(.card){
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:15px;
+    width:280px;
+    box-shadow:var(--sombra);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:0 auto 20px;
+}
+
+.card h3{
+    margin-bottom:8px;
+    color:var(--verde-escuro);
+}
+
+.card p{
+    font-size:14px;
+    margin-bottom:15px;
+    color:var(--texto-suave);
+}
+
+.card a{
+    text-decoration:none;
+    background:var(--verde-escuro);
+    color:white;
+    padding:8px 18px;
+    border-radius:20px;
+    font-size:14px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.card a:hover{
+    background:var(--verde-secundario);
+}
+
+/* =========================
+   11. LOGIN
+========================= */
+
+.login-wrapper{
+    width:100%;
+    min-height:100vh;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg, #e9f7ef, #f6f9f6);
+}
+
+.login-card{
+    width:460px;
+    max-width:100%;
+    background:#fff;
+    border-radius:14px;
+    padding:40px;
+    box-shadow:0 8px 30px rgba(55,66,59,0.12);
+    border:1px solid rgba(0,0,0,0.05);
+}
+
+.logo-titulo{
+    text-align:center;
+    margin-bottom:15px;
+    color:#2fa866;
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.logo-titulo span{
+    color:#2fa866;
+}
+
+.login-title{
+    text-align:center;
+    margin-bottom:30px;
+    color:#37423b;
+    font-size:28px;
+    font-weight:700;
+}
+
+.login-card .form-group{
+    margin-bottom:18px;
+}
+
+.login-card .form-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+    font-size:14px;
+    color:#333;
+}
+
+.login-card .form-control{
+    width:100%;
+    padding:12px 14px;
+    border-radius:8px;
+    border:1px solid #dbe6dd;
+    font-size:14px;
+    background:#fff;
+}
+
+.login-card .form-control:focus{
+    outline:none;
+    border-color:#5fcf80;
+    box-shadow:0 0 0 3px rgba(95,207,128,0.15);
+}
+
+/* Botão Realizar Login */
+.login-card .btn-mentor{
+    width:100%;
+    display:block;
+    padding:12px 20px;
+    border-radius:50px;
+    border:none;
+    background:#5fcf80;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:0.5px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+    text-align:center;
+}
+
+.login-card .btn-mentor:hover{
+    background:#4fba6e;
+    transform:translateY(-1px);
+    box-shadow:0 6px 18px rgba(95,207,128,0.35);
+}
+
+
+.login-links{
+    margin-top:18px;
+    text-align:center;
+    font-size:14px;
+}
+
+.login-card .btn-outline-mentor{
+    width:100%;
+    display:block;
+    text-align:center;
+    padding:12px 20px;
+    border-radius:50px;
+    border:2px solid #5fcf80;
+    background:transparent;
+    color:#5fcf80;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:0.5px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:12px;
+    text-decoration:none;
+}
+
+.login-card .btn-outline-mentor:hover{
+    background:#5fcf80;
+    color:#fff;
+    box-shadow:0 6px 18px rgba(95,207,128,0.35);
+}
+
+.login-card .login-links a[href="index.html"]{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    color:#5fcf80 !important;
+    text-decoration:none !important;
+    font-weight:600;
+}
+
+
+/* =========================
+   12. FORMULÁRIOS / CADASTRO / PRÉ-ATENDIMENTO
+========================= */
+.form-group,
+.field{
+    margin-bottom:18px;
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label,
+.field label{
+    margin-bottom:6px;
+    font-weight:600;
+    font-size:14px;
+    color:#555;
+}
+
+input,
+select,
+textarea,
+.form-control{
+    width:100%;
+    padding:12px 14px;
+    border-radius:8px;
+    border:1px solid #dbe6dd;
+    font-size:14px;
+    transition:0.25s;
+    background:#fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus{
+    outline:none;
+    border-color:var(--verde-principal);
+    box-shadow:0 0 0 3px rgba(56,184,107,0.15);
+}
+
+textarea{
+    min-height:180px;
+    resize:vertical;
+}
+
+form{
+    width:100%;
+}
+
+/* Cadastro */
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:var(--sombra);
+}
+
+.col-2{
+    grid-column:span 2;
+}
+
+.col-full{
+    grid-column:1 / -1;
+    width:100%;
+}
+
+/* Pré-atendimento */
+.container > h2{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.container > p{
+    text-align:center;
+    font-size:17px;
+    margin-bottom:40px;
+    color:#333;
+}
+
+.container form button{
+    margin:20px auto 0;
+    display:block;
+    padding:14px 60px;
+    border-radius:25px;
+}
+
+/* =========================
+   13. PÁGINA DO PSICÓLOGO
+========================= */
+.table .row{
+    display:grid;
+    grid-template-columns:2fr 1fr auto;
+    gap:15px;
+    margin-bottom:15px;
+    align-items:center;
+}
+
+.check,
+.radio{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    justify-content:center;
+}
+
+.check input{
+    width:auto;
+}
+
+.schedule{
+    display:flex;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+/* =========================
+  14. RODAPÉ 
+========================= */
+.footer-if{
+    background:#eef4ef;
+    padding:50px 8% 25px;
+    color:#24313d;
+    border-top:1px solid #dfe8e2;
+}
+
+.footer-container{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1.3fr 1.3fr;
+    gap:45px;
+    align-items:flex-start;
+}
+
+.footer-logo-text,
+.footer-logo-text span{
+    color:#38b86b;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.footer-logo p,
+.footer-col p{
+    color:#4d5a63;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:8px;
+}
+
+.footer-col h3{
+    font-size:18px;
+    margin-bottom:20px;
+    color:#24313d;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.footer-col a{
+    display:block;
+    color:#4d5a63;
+    font-size:14px;
+    margin-bottom:9px;
+    text-decoration:none;
+    transition:0.25s;
+}
+
+.footer-col a:hover{
+    color:#2fa866;
+    padding-left:4px;
+}
+
+.footer-bottom{
+    max-width:1120px;
+    margin:40px auto 0;
+    padding-top:20px;
+    border-top:1px solid #dfe8e2;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#5f6b73;
+    font-size:13px;
+}
+
+/* =========================================================
+   15. RESPONSIVIDADE DO WEBSITE
+   ========================================================= */
+
+
+/* =========================
+   TABLETS - tamanho máximo 768px
+========================= */
+@media (max-width: 768px){
+
+    /* Layout geral */
+    body{
+        overflow-x:hidden;
+    }
+
+    .container{
+        max-width:100%;
+        padding:50px 6%;
+    }
+
+    /* Header institucional */
+    .header-top{
+        flex-direction:column;
+        justify-content:center;
+        gap:20px;
+        padding:22px 6%;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+    nav ul,
+    .nav-list{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    nav ul li a,
+    nav a{
+        font-size:15px;
+    }
+
+    .btn-register{
+        padding:10px 20px;
+    }
+
+    .header-bottom{
+        padding:24px 6%;
+        gap:25px;
+    }
+
+    .menu-toggle span{
+        width:38px;
+        height:4px;
+    }
+
+    .menu-text{
+        font-size:22px;
+    }
+
+    .menu-dropdown{
+        width:250px;
+        top:52px;
+    }
+
+    .site-search{
+        width:300px;
+        max-width:100%;
+    }
+
+    .site-search input{
+        font-size:16px;
+    }
+
+    /* Hero da página inicial */
+    .hero-home,
+    .hero{
+        height:70vh;
+        padding:0 6%;
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero-content{
+        max-width:650px;
+    }
+
+    .hero-home h1,
+    .hero h1{
+        font-size:36px;
+        line-height:1.25;
+    }
+
+    .hero-home p,
+    .hero p{
+        font-size:17px;
+    }
+
+    /* Banners internos */
+    body:not(:has(.hero-home)) .hero,
+    .banner{
+        padding:65px 6%;
+    }
+
+    body:not(:has(.hero-home)) .hero h1,
+    .banner h2{
+        font-size:34px;
+    }
+
+    body:not(:has(.hero-home)) .hero p,
+    .banner p{
+        font-size:16px;
+        max-width:680px;
+    }
+
+    .breadcrumb{
+        padding:14px 6%;
+    }
+
+    /* Serviços */
+    .servicos{
+        padding:55px 6%;
+    }
+
+    .servicos-container{
+        gap:25px;
+    }
+
+    .servico-card{
+        width:calc(50% - 15px);
+        min-width:280px;
+    }
+
+    /* Página Sobre */
+    .sobre-intro.sem-imagem{
+        padding:60px 6%;
+        max-width:760px;
+    }
+
+    .sobre-intro-text h2,
+    .section-header h2{
+        font-size:30px;
+    }
+
+    .sobre-compromisso{
+        padding:60px 6%;
+    }
+
+    .compromisso-grid{
+        grid-template-columns:1fr;
+        max-width:680px;
+    }
+
+    /* Contato / Psicólogos */
+    .container:has(.card){
+        gap:30px;
+        padding:50px 6%;
+    }
+
+    .card{
+        width:45%;
+        min-width:260px;
+    }
+
+    /* Login */
+    .login-card{
+        width:70%;
+        padding:32px;
+    }
+
+    .login-title{
+        font-size:24px;
+    }
+
+    /* Formulários e cadastro */
+    .form-grid{
+        grid-template-columns:repeat(2, 1fr);
+        padding:25px;
+    }
+
+    .col-full{
+        grid-column:1 / -1;
+    }
+
+    .col-2{
+        grid-column:span 2;
+    }
+
+    /* Página do psicólogo */
+    .table .row{
+        grid-template-columns:1fr;
+    }
+
+    .schedule{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    /* Rodapé */
+    .footer-if{
+        padding:45px 6% 25px;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr 1fr;
+        gap:35px;
+    }
+
+    .footer-logo-text,
+    .footer-logo-text span{
+        font-size:26px;
+    }
+}
+
+
+/* =========================
+   SMARTPHONES - tamanho máximo 480px
+========================= */
+@media (max-width: 480px){
+
+    /* Layout geral */
+    .container{
+        padding:40px 6%;
+    }
+
+    .container h1{
+        font-size:26px;
+    }
+
+    .container > h2{
+        font-size:22px;
+    }
+
+    .container > p{
+        font-size:15px;
+        margin-bottom:30px;
+    }
+
+    /* Header institucional */
+    .header-top{
+        padding:20px 6%;
+        gap:18px;
+    }
+
+    .logo{
+        font-size:23px;
+        letter-spacing:2px;
+    }
+
+    nav ul,
+    .nav-list{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    nav ul li a,
+    nav a{
+        font-size:15px;
+    }
+
+    .btn-register{
+        width:auto;
+        padding:10px 22px;
+    }
+
+    .header-bottom{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:25px 6%;
+        gap:22px;
+    }
+
+    .menu-area{
+        justify-content:center;
+        gap:14px;
+    }
+
+    .menu-toggle span{
+        width:36px;
+        height:4px;
+    }
+
+    .menu-text{
+        font-size:21px;
+    }
+
+    .menu-dropdown{
+        left:50%;
+        transform:translateX(-50%);
+        width:240px;
+        top:50px;
+    }
+
+    .menu-dropdown a{
+        font-size:14px;
+        padding:9px 0;
+    }
+
+    .site-search{
+        width:100%;
+        max-width:320px;
+        justify-content:center;
+        background:#fff;
+        padding:6px 12px;
+        border-radius:30px;
+        box-shadow:0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .site-search input{
+        font-size:15px;
+    }
+
+    .search-btn{
+        width:34px !important;
+        height:34px !important;
+    }
+
+    .search-btn::before{
+        width:17px;
+        height:17px;
+        border-width:3px;
+    }
+
+    .search-btn::after{
+        width:11px;
+        height:3px;
+        top:23px;
+        left:21px;
+    }
+
+    /* Hero da página inicial */
+    .hero-home,
+    .hero{
+        height:auto;
+        min-height:65vh;
+        padding:65px 6%;
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero-home h1,
+    .hero h1{
+        font-size:28px;
+        line-height:1.25;
+    }
+
+    .hero-home p,
+    .hero p{
+        font-size:16px;
+    }
+
+    .btn-login{
+        padding:10px 26px;
+        font-size:14px;
+    }
+
+    /* Banners internos */
+    body:not(:has(.hero-home)) .hero,
+    .banner{
+        padding:55px 6%;
+    }
+
+    body:not(:has(.hero-home)) .hero h1,
+    .banner h2{
+        font-size:28px;
+    }
+
+    body:not(:has(.hero-home)) .hero p,
+    .banner p{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .breadcrumb{
+        padding:12px 6%;
+        text-align:center;
+        font-size:13px;
+    }
+
+    /* Serviços */
+    .servicos{
+        padding:40px 6%;
+    }
+
+    .servicos-container{
+        flex-direction:column;
+        align-items:center;
+        gap:24px;
+    }
+
+    .servico-card{
+        width:100%;
+        min-width:0;
+    }
+
+    .servico-card img{
+        height:190px;
+    }
+
+    .servico-footer a{
+        width:100%;
+    }
+
+    /* Página Sobre */
+    .sobre-intro.sem-imagem{
+        padding:50px 6%;
+    }
+
+    .sobre-intro-text h2,
+    .section-header h2{
+        font-size:24px;
+    }
+
+    .sobre-intro-text p,
+    .section-header p{
+        font-size:15px;
+        text-align:justify;
+    }
+
+    .sobre-compromisso{
+        padding:50px 6%;
+    }
+
+    .compromisso-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .compromisso-card{
+        padding:24px;
+    }
+
+    /* Contato / Psicólogos */
+    .container:has(.card){
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        padding:40px 6%;
+    }
+
+    .card{
+        width:100%;
+        min-width:0;
+        padding:26px 18px;
+    }
+
+    .card img{
+        width:140px;
+        height:140px;
+    }
+
+    /* Login */
+    .login-wrapper{
+        padding:18px;
+    }
+
+    .login-card{
+        width:100%;
+        padding:22px;
+        border-radius:12px;
+    }
+
+    .logo-titulo{
+        font-size:23px;
+    }
+
+    .login-title{
+        font-size:22px;
+    }
+
+    .login-card .btn-mentor,
+    .login-card .btn-outline-mentor{
+        padding:11px 16px;
+        font-size:14px;
+    }
+
+    /* Formulários e cadastro */
+    .form-grid{
+        grid-template-columns:1fr;
+        padding:22px;
+        gap:16px;
+    }
+
+    .col-2,
+    .col-full{
+        grid-column:1 / -1;
+    }
+
+    input,
+    select,
+    textarea,
+    .form-control{
+        font-size:14px;
+        padding:11px 12px;
+    }
+
+    textarea{
+        min-height:140px;
+    }
+
+    .container form button{
+        width:100%;
+        padding:13px;
+    }
+
+    /* Página do psicólogo */
+    .table .row{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .schedule{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    /* Rodapé */
+    .footer-if{
+        padding:40px 6% 25px;
+        text-align:center;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-logo-text,
+    .footer-logo-text span{
+        font-size:24px;
+    }
+
+    .footer-col h3{
+        font-size:17px;
+        margin-bottom:14px;
+    }
+
+    .footer-col a:hover{
+        padding-left:0;
+    }
+
+    .footer-bottom{
+        margin-top:30px;
+    }
+}
+
+
+

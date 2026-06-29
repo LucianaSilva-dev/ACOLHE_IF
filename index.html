@@ -4,26 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Acolhe IF</title>
-<link rel="stylesheet" href="style/style.index.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<header class="header header-institucional">
 
-<header class="header">
-    <div class="logo">ACOLHE IF</div>
+    <div class="header-top">
+        <div class="logo">ACOLHE IF</div>
 
-    <nav>
-        <ul class="nav-list">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="pagina_de_servicos.html">Serviços</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="cadastro.html" class="btn-register">Registrar-se</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="pagina_de_servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html" class="btn-register">Registrar-se</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-bottom">
+
+        <div class="menu-area">
+            <input type="checkbox" id="menu-check">
+
+            <label for="menu-check" class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <label for="menu-check" class="menu-text">IF Sertão-PB</label>
+
+            <div class="menu-dropdown">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="pagina_de_servicos.html">Serviços</a>
+                <a href="contato.html">Contato</a>
+                <a href="cadastro.html">Registrar-se</a>
+            </div>
+        </div>
+
+       <form class="site-search" action="#" method="get">
+           <input type="search" name="pesquisa" placeholder="Pesquisar no site">
+           <button type="submit" class="search-btn" aria-label="Pesquisar"></button>
+       </form>
+
+       </div>
+
 </header>
 
-<section class="hero">
+<section class="hero-home">
     <div class="hero-content">
         <h1>Acolhendo Hoje,<br> Cuidando do Amanhã</h1>
         <p>
@@ -33,6 +65,51 @@
         <a href="login.html" class="btn-login">Login</a>
     </div>
 </section>
+
+<footer class="footer-if">
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <div class="footer-logo-text">
+                <span>ACOLHE IF</span><br>
+                
+            </div>
+            <p>
+                Espaço de acolhimento, escuta e apoio emocional para estudantes.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Menu</h3>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="pagina_de_servicos.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+            <a href="cadastro.html">Registrar-se</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>Participantes</h3>
+            <p>Luciana Silva</p>
+            
+        </div>
+
+        <div class="footer-col">
+            <h3>Projeto</h3>
+            <p>
+                Desenvolvido por discentes do curso de Análise e Desenvolvimento de Sistemas.
+            </p>
+            <p>
+                IFPB - Campus Cajazeiras
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Acolhe IF. Todos os direitos reservados.</p>
+    </div>
+</footer>
 
 </body>
 </html>

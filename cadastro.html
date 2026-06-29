@@ -4,22 +4,57 @@
   <meta charset="UTF-8">
   <title>Cadastro - ACOLHE IF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.cadastro.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-cadastro">
 
-<header class="header">
-  <div class="logo">ACOLHE IF</div>
-  <nav>
-      <ul class="nav-list">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="pagina_de_servicos.html">Serviços</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="cadastro.html" class="btn-register">Registrar-se</a></li>
-      </ul>
-  </nav>
+<header class="header header-institucional">
+
+    <div class="header-top">
+        <div class="logo">ACOLHE IF</div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="pagina_de_servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html" class="btn-register">Registrar-se</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-bottom">
+
+        <div class="menu-area">
+            <input type="checkbox" id="menu-check">
+
+            <label for="menu-check" class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <label for="menu-check" class="menu-text">IF Sertão-PB</label>
+
+            <div class="menu-dropdown">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="pagina_de_servicos.html">Serviços</a>
+                <a href="contato.html">Contato</a>
+                <a href="cadastro.html">Registrar-se</a>
+            </div>
+        </div>
+
+        <form class="site-search" action="#" method="get">
+             <input type="search" name="pesquisa" placeholder="Pesquisar no site">
+             <button type="submit" class="search-btn" aria-label="Pesquisar"></button>
+        </form>
+
+    </div>
+
 </header>
+
 
 <main class="container">
   <h1>Cadastro</h1>
